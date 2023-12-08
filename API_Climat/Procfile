@@ -1,0 +1,2 @@
+web: gunicorn
+API_Climat.wsgi --log-file -
