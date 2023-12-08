@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-f#s1liaks#ke1q703-3k9w9qnf(zgvxu!s@u&%eh^r^r%3_bmk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["api-chatgpt-1.onrender.com", "0.0.0.0/24"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -37,11 +37,13 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'corsheaders',
     'rest_framework',
     'openai',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -101,6 +103,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/

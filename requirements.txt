@@ -2,3 +2,4 @@ djangorestframework==3.14.0
 Django==4.2.1
 openai
 gunicorn
+django-cors-headers==3.14.0
