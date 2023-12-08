@@ -12,7 +12,7 @@ class ChatGPTRequest(viewsets.ViewSet):
 		completion = client.chat.completions.create(
 		model="gpt-3.5-turbo",
 		messages=[
-			{"role": "system", "content": "You are a poetic assistant."},
+			{"role": "system", "content": "You are a specialist of Climat Change Advice. You can talk about causes of Climat Change."},
 			{"role": "user", "content": request.GET.get('prompt')}
 		]
 		)
